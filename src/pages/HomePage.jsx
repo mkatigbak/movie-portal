@@ -4,7 +4,7 @@ import { fetchTopRatedMovies, searchMovies, fetchGenres, fetchMoviesByGenre } fr
 import styles from '../styles/HomePage.module.css';
 
 const MOVIES_PER_ROW = 6;
-const MOVIES_PER_PAGE = MOVIES_PER_ROW * 3; // Adjust this to the desired number of rows per page
+const MOVIES_PER_PAGE = MOVIES_PER_ROW * 3;
 
 function HomePage() {
   const [movies, setMovies] = useState([]);
@@ -49,7 +49,7 @@ function HomePage() {
 
   const handleGenreChange = (e) => {
     setGenreFilter(e.target.value);
-    setCurrentPage(1); // Reset to first page when genre changes
+    setCurrentPage(1);
   };
 
   const handleMovieClick = (id) => navigate(`/movie/${id}`);
